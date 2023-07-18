@@ -26,15 +26,15 @@ void initialise() {
 void pretty_print() {
   Serial.print("Lat: ");
   Serial.print(GPS.latitude, 4);
-  Serial.print(GPS.lat);
+  Serial.println(GPS.lat);
 
-  Serial.print("\nLon: ");
+  Serial.print("Lon: ");
   Serial.print(GPS.longitude, 4);
   Serial.println(GPS.lon);
 
   Serial.print("Alt: ");
-  Serial.println(GPS.altitude);
-  Serial.print("m");
+  Serial.print(GPS.altitude);
+  Serial.println("m\n\n");
 }
 
 } // namespace GPS
