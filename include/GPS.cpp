@@ -23,7 +23,7 @@ void initialise() {
  * @brief prints GPS prettily
  *
  */
-void pretty_print() {
+void pretty_serial_print() {
   Serial.print("Lat: ");
   Serial.print(GPS.latitude, 4);
   Serial.println(GPS.lat);

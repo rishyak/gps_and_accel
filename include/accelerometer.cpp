@@ -8,10 +8,13 @@ Adafruit_ADXL345_Unified accel = Adafruit_ADXL345_Unified(12345);
 /**
  * @brief initialise accelerometer
  *
+ * @note uses serial
+ * @warning blocking operation
+ *
  */
 void initialise() {
   if (!accel.begin()) {
-    Serial.println("Ooops, no ADXL345 detected ... Check your wiring!");
+    Serial.println("Ooops, no ADXL345 detected");
     while (1)
       ;
   }
@@ -22,7 +25,7 @@ void initialise() {
  * @brief pring accelerometer prettily
  *
  */
-void pretty_print() {
+void pretty_serial_print() {
   sensors_event_t event;
   accel.getEvent(&event);
 

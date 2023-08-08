@@ -1,5 +1,5 @@
-#include "GPS.cpp"
 #include "accelerometer.cpp"
+#include "gps.cpp"
 
 void setup() {
   Serial.begin(115200);
@@ -11,8 +11,8 @@ void setup() {
 }
 
 void loop() {
-  GPS::pretty_print();
-  Accelerometer::pretty_print();
+  GPS::pretty_serial_print();
+  Accelerometer::pretty_serial_print();
 
   delay(5000);
 }
