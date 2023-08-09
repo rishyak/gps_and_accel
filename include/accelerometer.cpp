@@ -15,8 +15,7 @@ Adafruit_ADXL345_Unified accel = Adafruit_ADXL345_Unified(12345);
 void initialise() {
   if (!accel.begin()) {
     Serial.println("Ooops, no ADXL345 detected");
-    while (1)
-      ;
+    while (1) {}
   }
   accel.setRange(ADXL345_RANGE_16_G);
 }
